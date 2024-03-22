@@ -19,3 +19,7 @@
 
 # Go workspace file
 go.work
+
+resources/
+.idea
+.DS_Store

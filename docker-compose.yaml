@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+  speech-to-text:
+    build:
+     context: .
+     dockerfile: Dockerfile
+    hostname: speech-to-text
+    volumes:
+      - ./resources:/resources
