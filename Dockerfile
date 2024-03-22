@@ -21,6 +21,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ffmpeg \
     python3 \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Install yt-dlp using pip
@@ -28,6 +29,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     python3-pip \
     && pip3 install --no-cache-dir yt-dlp \
+    && pip3 install git+https://github.com/openai/whisper.git \
     && apt-get purge -y python3-pip \
     && apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
